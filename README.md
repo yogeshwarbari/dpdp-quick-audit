@@ -9,8 +9,6 @@ Automated compliance tool that scans GitHub repositories for violations of India
 3. Click "Scan"
 4. Get compliance score (0-100) with actionable fixes
 
-**Example:** `https://github.com/pallets/flask`
-
 ## Features
 
 ✅ **Real-time Scanning** - Analyzes actual code from GitHub repositories
