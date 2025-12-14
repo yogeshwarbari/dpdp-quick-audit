@@ -4,7 +4,7 @@ Automated compliance tool that scans GitHub repositories for violations of India
 
 ## Quick Start
 
-1. Visit the live app (Vercel URL)
+1. Visit the live app
 2. Paste a **public** GitHub repository URL
 3. Click "Scan"
 4. Get compliance score (0-100) with actionable fixes
@@ -69,6 +69,33 @@ Final Score: 0-100
 - 🗄️ **Data Apps** - Databases, APIs
 - 🔐 **Any web project** with user data handling
 
+## File Types Scanned
+
+The scanner analyzes these file types for DPDP violations:
+
+**Backend & Configuration**
+- `main.py`, `app.py` - Python entry points
+- `settings.py`, `config.py` - Configuration files
+- `requirements.txt` - Python dependencies
+- `views.py`, `models.py`, `urls.py` - Django/Flask files
+- `routes.js`, `middleware.js` - Express/Node routes
+- `.env.example` - Environment variable templates
+- `package.json` - Node.js dependencies
+
+**Frontend**
+- `index.js`, `app.js`, `server.js` - Main files
+- `components/`, `pages/` - React/Vue files
+
+**Infrastructure**
+- `Dockerfile`, `docker-compose.yml` - Container configs
+
+**Documentation**
+- `README.md` - Project documentation
+
+**Total:** Fetches up to 15 key files from each repository
+
+**Scanning Method:** Raw GitHub API - retrieves actual file content and performs regex-based pattern matching for DPDP violations.
+
 ## Requirements
 
 - **Public GitHub Repository** (private repos cannot be scanned)
@@ -129,10 +156,6 @@ This tool helps developers ensure their applications comply with these requireme
 ## Disclaimer
 
 This tool provides automated scanning for educational and compliance purposes. It should not be considered a complete compliance audit or security assessment. For comprehensive DPDP compliance, consult with legal and security professionals.
-
-## Built for
-
-**Assemble Hack 25** - A global hackathon for AI agents and automation tools.
 
 ## Project Structure
 
@@ -205,14 +228,13 @@ Deployed on Vercel. To deploy your own:
 
 Try scanning these popular repositories:
 
-- `https://github.com/pallets/flask` - Web framework
-- `https://github.com/django/django` - Web framework
-- `https://github.com/tiangolo/fastapi` - API framework
 - `https://github.com/expressjs/express` - Node.js framework
+- `https://github.com/MotiaDev/motia` - Motia Backend Development Tool
+- `https://github.com/angular/angular` - Angular Framework
 
 ## Contributing
 
-This is a hackathon project. Contributions welcome via pull requests.
+Contributions welcome via pull requests.
 
 ## License
 
@@ -222,18 +244,7 @@ MIT
 
 For issues or questions, please open a GitHub issue.
 
-## Hackathon Info
-
-- **Event:** Assemble Hack 25
-- **Theme:** AI Agents and Automation
-- **Prize Categories:**
-  - Stormbreaker Deployment Award (Vercel)
-  - Captain Code Award (Code Quality)
-  - Infinity Build Award (Autonomous Scanning)
-
 ## Contact
-
-Built during Assemble Hack 25. 
 
 For questions or feedback, please reach out.
 
